@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>{{ title }}</title>
+    </head>
+    <body>
+		<h1>{{ title }}</h1>
+		
+		{% if number %}
+		<p>Number of files: {{ number }}</p>
+		{% endif %}
+		
+		{% if total_size %}
+		<p>Total size: {{ total_size }} KB</p>
+		{% endif %}
+		
+        <ul>
+			{% for file in files %}
+			<li><a href="{{ file[0] }}">{{ file[0] }}</a> ({{ file[1] }} KB)</li>
+			{% endfor %}
+		</ul>
+    </body>
+</html>

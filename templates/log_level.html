@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <title>{{ title }}</title>
+    </head>
+    <body>
+        <h1>{{ title }}</h1>
+		
+		{% for key,value in dict.items() %}
+		{{ key }} : {{ value }}
+		<br>
+		{% endfor %}
+		
+		{% if info %}
+		<br>
+		Info: {{ info }}
+		<br>
+		{% endif %}
+		
+		<br>
+		
+		<table border="1">
+		<tr>
+		<th>Name</th>
+		<th>Level</th>
+		</tr>
+		<tr>
+		<td>CRITICAL</td>
+		<td>50</td>
+		</tr>
+		<tr>
+		<td>ERROR</td>
+		<td>40</td>
+		</tr>
+		<tr>
+		<td>WARNING</td>
+		<td>30</td>
+		</tr>
+		<tr>
+		<td>INFO</td>
+		<td>20</td>
+		</tr>
+		<tr>
+		<td>DEBUG</td>
+		<td>10</td>
+		</tr>
+		<tr>
+		<td>NOTSET</td>
+		<td>0</td>
+		</tr>
+		</table>
+    </body>
+</html>

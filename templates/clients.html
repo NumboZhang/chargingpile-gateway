@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>{{ title }}</title>
+    </head>
+    <body>
+		<h1>{{ title }}</h1>
+		<p>Number of clients: {{ number }}</p>
+		<table border="1">
+		<tr>
+		<th>ID</th>
+		<th>IP, Port</th>
+		<th>alive</th>
+		</tr>
+		{% for client in clients %}
+		<tr>
+		<td>{{client.get_id()}}</td>
+		<td>{{client.get_client_address()}}</td>
+		<td>{{client.get_alive()}}</td>
+		</tr>
+		{% endfor %}
+		</table>
+    </body>
+</html>
